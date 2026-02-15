@@ -5,17 +5,17 @@ Bu repo, HTML5 öğrenirken aldığım notları ve yaptığım örnek çalışma
 ## 📂 İçerik
 
 ### HTML Temel Konular
-- [01.Layout.html](1.Layout.html) - HTML sayfa yapısı ve meta etiketleri
-- [02.Headin-Paragraph.html](2.Headin-Paragraph.html) - Başlıklar ve paragraflar
-- [03.Styling.html](3.Styling.html) - Inline CSS stillendirme
-- [04.Formatting.html](4.Formatting.html) - Metin formatlama etiketleri
+- [01.Layout.html](01.Layout.html) - HTML sayfa yapısı ve meta etiketleri
+- [02.Headin-Paragraph.html](02.Headin-Paragraph.html) - Başlıklar ve paragraflar
+- [03.Styling.html](03.Styling.html) - Inline CSS stillendirme
+- [04.Formatting.html](04.Formatting.html) - Metin formatlama etiketleri
 
 ### HTML İleri Konular
-- [05.Links.html](5.Links.html) - Bağlantılar ve yönlendirmeler
-- [06.Images.html](6.Images.html) - Görsel ekleme ve düzenleme
-- [07.Tables.html](7.Tables.html) - Tablo yapıları
-- [08.Lists.html](8.Lists.html) - Sıralı ve sırasız listeler
-- [09.Videos.html](9.Videos.html) - Video ekleme (iframe)
+- [05.Links.html](05.Links.html) - Bağlantılar ve yönlendirmeler
+- [06.Images.html](06.Images.html) - Görsel ekleme ve düzenleme
+- [07.Tables.html](07.Tables.html) - Tablo yapıları
+- [08.Lists.html](08.Lists.html) - Sıralı ve sırasız listeler
+- [09.Videos.html](09.Videos.html) - Video ekleme (iframe)
 - [10.Audios.html](10.Audios.html) - Ses dosyası ekleme
 
 ### HTML Layout ve Yapı
@@ -43,4 +43,5 @@ Detaylı notlarım için [notes.md](notes.md) dosyasına göz atabilirsiniz. Bu 
 - ✅ Form elemanları ve validasyon
 - ✅ Semantic HTML yapısı
 - ✅ SEO uyumlu kodlama
+
 
