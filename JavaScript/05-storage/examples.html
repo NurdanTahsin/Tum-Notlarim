@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Storage Örnekleri</title>
+</head>
+<body>
+    <h1>localStorage ve sessionStorage</h1>
+
+    <div>
+        <h2>Tema Seçici</h2>
+        <button onclick="setTheme('light')">Açık</button>
+        <button onclick="setTheme('dark')">Koyu</button>
+        <p>Seçilen: <span id="currentTheme"></span></p>
+    </div>
+
+    <div>
+        <h2>Not Defteri (localStorage)</h2>
+        <textarea id="note" rows="5" cols="50" placeholder="Notun..."></textarea>
+        <br>
+        <button onclick="saveNote()">Kaydet</button>
+        <button onclick="clearNote()">Temizle</button>
+    </div>
+
+    <div>
+        <h2>Geçici Mesaj (sessionStorage)</h2>
+        <input type="text" id="tempMsg" placeholder="Geçici mesaj">
+        <button onclick="saveTempMsg()">Kaydet</button>
+        <button onclick="showTempMsg()">Göster</button>
+        <p id="tempOutput"></p>
+    </div>
+
+    <div>
+        <h2>Sepet Simülasyonu</h2>
+        <input type="text" id="item" placeholder="Ürün adı">
+        <button onclick="addToCart()">Sepete Ekle</button>
+        <button onclick="showCart()">Sepeti Göster</button>
+        <button onclick="clearCart()">Sepeti Temizle</button>
+        <ul id="cartList"></ul>
+    </div>
+
+    <script>
+        // ========== Tema Yönetimi ==========
+        function setTheme(theme) {
+            localStorage.setItem('theme', theme);
+            document.getElementById('currentTheme').textContent = theme;
+            document.body.style.backgroundColor = theme === 'dark' ? '#333' : '#fff';
+            document.body.style.color = theme === 'dark' ? '#fff' : '#000';
+        }
+
+        function loadTheme() {
+            const theme = localStorage.getItem('theme') || 'light';
+            setTheme(theme);
+        }
+
+        // ========== Not Defteri ==========
+        const noteArea = document.getElementById('note');
+        
+        function saveNote() {
+            localStorage.setItem('myNote', noteArea.value);
+            alert('Not kaydedildi!');
+        }
+
+        function clearNote() {
+            localStorage.removeItem('myNote');
+            noteArea.value = '';
+        }
+
+        function loadNote() {
+            const saved = localStorage.getItem('myNote');
+            if (saved) noteArea.value = saved;
+        }
+
+        // Otomatik kayıt
+        noteArea.addEventListener('input', () => {
+            localStorage.setItem('autoSave', noteArea.value);
+        });
+
+        // ========== Session Storage ==========
+        function saveTempMsg() {
+            const msg = document.getElementById('tempMsg').value;
+            sessionStorage.setItem('tempMessage', msg);
+            alert('Geçici mesaj kaydedildi (sekme kapanınca silinir)');
+        }
+
+        function showTempMsg() {
+            const msg = sessionStorage.getItem('tempMessage') || 'Mesaj yok';
+            document.getElementById('tempOutput').textContent = msg;
+        }
+
+        // ========== Sepet ==========
+        function addToCart() {
+            const item = document.getElementById('item').value;
+            if (!item) return;
+
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ 
+                id: Date.now(), 
+                name: item 
+            });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            document.getElementById('item').value = '';
+            showCart();
+        }
+
+        function showCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const list = document.getElementById('cartList');
+            
+            list.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item.name;
+                list.appendChild(li);
+            });
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            showCart();
+        }
+
+        // ========== Sayfa Yüklendiğinde ==========
+        window.addEventListener('load', () => {
+            loadTheme();
+            loadNote();
+            showCart();
+        });
+
+        // ========== Storage Event (diğer sekmeler) ==========
+        window.addEventListener('storage', (e) => {
+            console.log('Başka sekmede değişiklik:', e.key, e.newValue);
+        });
+    </script>
+</body>
+</html>

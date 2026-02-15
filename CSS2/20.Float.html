@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        /* Örnek 1: Eski Float Kullanımı - 3 Kutu Layout */
+        .container {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .box {
+            width: 30%;
+            padding: 20px;
+            margin: 1%;
+            float: left;
+            background-color: #3498db;
+            color: white;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Örnek 2: Float ile Resim ve Metin */
+        .content {
+            margin-top: 30px;
+        }
+
+        .content img {
+            float: left;
+            width: 300px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float Kullanımı</h1>
+
+    <!-- Örnek 1: Eski Float Kullanımı - 3 Kutu Layout -->
+    <h2>Örnek 1: Eski Float Kullanımı (3 Kutu Layout)</h2>
+    <div class="container clearfix">
+        <div class="box">
+            <h3>Kutu 1</h3>
+            <p>Bu kutular float: left ile yan yana dizilmiştir. Eskiden layout yapmak için float yaygın olarak kullanılırdı.</p>
+        </div>
+        <div class="box">
+            <h3>Kutu 2</h3>
+            <p>Float kullanımı artık layout için önerilmez. Bunun yerine Flexbox veya Grid kullanılmalıdır.</p>
+        </div>
+        <div class="box">
+            <h3>Kutu 3</h3>
+            <p>Clearfix ile float'ların etkisini temizleyerek doğru layout sağlanır.</p>
+        </div>
+    </div>
+
+    <p style="padding: 20px; background-color: #f0f0f0;">Float'ların altındaki içerik clearfix sayesinde düzgün görünür.</p>
+
+    <!-- Örnek 2: Float ile Resim ve Metin (Modern Kullanım) -->
+    <h2>Örnek 2: Float ile Resim ve Metin (Modern Kullanım)</h2>
+    <div class="content">
+        <img src="foto/genis.jpg" alt="Resim">
+        <p>Float özelliği günümüzde hala resimlerin etrafında metinlerin akmasını sağlamak için kullanılır. Bu, modern web tasarımında float'ın hala geçerli olduğu bir kullanım alanıdır.</p>
+        <p>Resim float: left ile sola hizalanır ve metin resmin etrafında akar. Bu, dergi ve gazete düzenlerinde sıkça görülen bir teknikdir.</p>
+        <p>Float ile resim ve metin düzenlemesi, layout oluşturmaktan ziyade içerik akışını kontrol etmek için kullanılmalıdır. Layout için Flexbox veya CSS Grid tercih edilmelidir.</p>
+        <p>Bu paragraflar resmin yanında ve altında devam eder. Float özelliği sayesinde metin resmi sarar ve doğal bir okuma deneyimi sağlar.</p>
+    </div>
+</body>
+</html>

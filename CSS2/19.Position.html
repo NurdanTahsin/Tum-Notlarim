@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        /* .fixed-topbar {
+            width: 50%;
+            padding: 20px;
+            background: black;
+            color: white;
+            text-align: center;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        } */
+
+        .red {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative; /* olduğu yerden hareket ettirir */
+            top: 20px;
+            left: 20px;
+            z-index: 1; /* default 0 ama önde gözükmesi için 1 verdik */
+        }
+
+        .blue {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            left: 5px;
+            top: 5px;
+        }
+
+        .outer-box {
+            width: 200px;
+            height: 200px;
+            background: #a7a7a7;
+            position: relative; /* içindeki absolute elementin referans noktası olur. staticten farklı olmalı */
+            left: 100px;
+        }
+
+        .inner-box {
+            width: 50px;
+            height: 50px;
+            background: blue;
+            position: absolute; /* en yakın "position özelliği olan" parent'a göre konumlanır. hiçirinde yoksa en üst parent yani bodye göre konum alır */
+            bottom: 10px;
+            right: 10px;
+        }
+
+        span {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background: red;
+            position: relative;
+            left: 75px;
+            z-index: -1; /* arka planda kalması için negatif değer verdik */
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <br><br>
+    <div class="outer-box">
+        <div class="inner-box"></div>
+    </div><br>
+    <span></span>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, suscipit.
+    <!-- Yazı, spanin hemen yanından başladı. Spanin konumunu değiştirsek de yazının yeri değişmedi
+         Çünkü, tarayıcı spani hayali olarak hala eski yerinde gördü -->
+</body>
+</html>

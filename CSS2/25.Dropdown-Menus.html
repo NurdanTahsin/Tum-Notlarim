@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menus</title>
+
+    <style>
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown button {
+            background: rgb(191, 190, 190);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .dropdown .content {
+            display: none;
+            position: absolute;
+            background: #f2f2f2;
+            min-width: 100px;
+            box-shadow: 2px 2px 5px black;
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+
+        .dropdown:hover button {
+            background: grey;
+        }
+        /*.dropdown button:hover
+
+        Mouse sadece button'un tam üzerinde olduğunda button stili değişir
+        Mouse button'dan ayrılıp menüye geçerse stil kaybolur
+        Sadece button'ı kapsar*/
+
+        .dropdown a:hover {
+            background: rgb(208, 206, 206);
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button type="button">Food</button>
+        <div class="content">
+            <a href="#">Fruits</a>
+            <a href="#">Vegetables</a>
+            <a href="#">Grains</a>
+        </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, dignissimos? Nam dolores hic sit quas aperiam maxime accusamus eaque laborum? Illum tempora nemo dolore exercitationem aperiam esse, debitis reiciendis ratione?</p>
+</body>
+</html>

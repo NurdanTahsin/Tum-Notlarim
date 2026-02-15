@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            /* font-family: Arial, Helvetica, sans-serif
+               Cihaz destekliyorsa önce ariel denencek. Olmazsa helvetica denencek.
+               O da olmazsa o cihazdaki default sans-serif fontunu kullanacak */
+            font-family: "Bitcount Prop Single", sans-serif;
+        }
+
+        p {
+            font-size: 1.5rem; /* rem= root elementin(html) size'ı kadar. */
+            line-height: 1.5em; /* em= o elementin size'ı kadar. sürekli px girmeden orantılı değişmesi için */
+        }
+
+        div#div1 {
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        div#div1 span {
+            font-size: 50%;
+        }
+
+        div#div2 p {
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Başlık 1</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Odio cupiditate ipsam inventore, rerum error laborum velit,
+        laudantium quia non repudiandae temporibus expedita perferendis,
+        incidunt doloremque quae dignissimos similique qui sit quam.
+        Aut earum dicta, fugiat quam incidunt, soluta tenetur officiis,
+        tempora veritatis nihil enim dolorum! Hic vitae eligendi excepturi vero?
+    </p>
+    <div id="div1">
+        <p>
+            Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Alias, voluptate.
+        </p>
+    </div>
+    <div id="div2">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sit!
+        </p>
+    </div>
+</body>
+</html>   

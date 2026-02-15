@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            min-height: 600px;
+            background: black;
+            flex-direction: row;
+            /* flex-direction değişince bunun da kontrol ettiği yön değişti */
+            justify-content: flex-start;
+            /* elementler sığmazsa alt satıra geçerler */
+            flex-wrap: wrap;
+        }
+
+        .box {
+            text-align: center;
+            background: #f2f2f2;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        .break {
+            flex-basis: 100%;
+            height: 0;
+        }
+
+        .box2 {
+            text-align: center;
+            background: #f2f2f2;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        .box-1 {
+            order: 3;
+            background: red;
+            /* boşluğu kaplar */
+            flex-grow: 1;
+        }
+
+        .box-2 {
+            order: 1;
+            background: blue;
+            /* diğerlerinden farklı konumlandırmak için */
+            align-self: flex-end;
+        }
+
+        .box-3 {
+            order: 2;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <!-- Satır atlaması için full genişlikte öge kondu -->
+        <div class="break"></div>
+
+        <div class="box2 box-1"></div>
+        <div class="box2 box-2"></div>
+        <div class="box2 box-3"></div>
+    </div>
+</body>
+</html>

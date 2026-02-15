@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.box-1 {
+            /* padding-left: 20px;
+               padding-right: 20px;
+               padding-right: 20px;
+               padding-top: 20px;
+               padding: 20px 20px 20px 20px;
+               padding: 20px; */
+
+            width: 500px;
+            height: 200px;
+            border: 5px solid black;
+            padding: 20px 50px;
+            /* width:500 + border:10 + padding: 100 = 610 kutunun toplam genişliği */
+            box-sizing: border-box; /* border ve padding dahil 500px olacak artık */
+        }
+
+        div.box-2 {
+            width: 500px;
+            height: 200px;
+            border: 7px solid black;
+            padding: 40px;
+            box-sizing: border-box; /* default değeri, sadece içerik alanı 500px olacak */
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, minus?
+    </div>
+    <div class="box-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, distinctio.
+    </div>
+</body>
+</html>

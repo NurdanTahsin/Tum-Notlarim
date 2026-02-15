@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Units</title>
+
+    <style>
+        div {
+            font-size: 1.5em;
+            /* Üst elementin (body) font boyutunun 1.5 katı = 24px */
+        }
+
+        p {
+            font-size: 1.5rem;
+            /* Root elementin (html) font boyutunun 1.5 katı = 32px
+               html boyutunu değiştirdiğimde otomatik olarak rem yazan tüm ögeler değişecek */
+            padding: 1.5em;
+            /* Kendi (p) font boyutunun 1.5 katı = 48px */
+        }
+
+        .box {
+            font-size: 300%;
+            /* Üst elementin (body) font boyutunun 3 katı = 48px */
+            width: 40vw;
+            height: 20vh;
+            background-color: lightblue;
+            /* Görüntüleme alanının (viewport) genişliğinin %40'ı ve yüksekliğinin %20'si */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sed.
+        </p>
+    </div>
+    <div class="box">Box</div>
+</body>
+</html>
