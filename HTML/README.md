@@ -1,6 +1,5 @@
 # HTML5 Çalışma Notları
 
-Bu repo, HTML5 öğrenirken aldığım notları ve yaptığım örnek çalışmaları içermektedir.
 
 ## 📂 İçerik
 
