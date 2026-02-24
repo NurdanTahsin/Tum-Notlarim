@@ -1,6 +1,5 @@
-# JavaScript React Hazırlık Notları
+# JavaScript Notları
 
-Bu klasör, React ve React Native öğrenmeden önce bilmeniz gereken JavaScript konularını içerir.
 
 ## 📚 Konu Listesi
 
@@ -79,14 +78,6 @@ Bu klasör, React ve React Native öğrenmeden önce bilmeniz gereken JavaScript
 - **React'te sürekli kullanılır!**
 
 
-
-## 🚀 React Native Notları
-
-React Native için ek olarak:
-- DOM yerine native components kullanılır
-- Web event'ları yerine touch event'ları
-- localStorage yerine AsyncStorage
-- Fetch API aynı şekilde çalışır
 
 ## 📖 Her Klasörde
 
