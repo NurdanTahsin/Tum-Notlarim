@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+
+    <style>
+        .para1 {
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            line-height: 1.5em;
+        }
+
+        .para1::first-line {
+            color: red;
+        }
+
+        .para1::first-letter {
+            color: blue;
+            font-size: 50px;
+        }
+
+        .para1::after {
+            content: "Paragraf Sonrası"; /* url, logo koyabilirsin */
+        }
+
+        .para1::before {
+            content: "Paragraf Öncesi ";
+        }
+    </style>
+</head>
+<body>
+    <p class="para1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ullam dolorem assumenda eius placeat sed ab dignissimos, facere nam. Aspernatur voluptas omnis nobis nemo voluptates, alias dolores nostrum, minima, vitae veniam temporibus. Cupiditate tempore porro voluptatibus ipsam molestias, facere velit adipisci neque repudiandae. Pariatur expedita qui doloribus, unde laborum laboriosam, molestias exercitationem quam quo cupiditate eos alias sapiente dicta nobis nulla. Exercitationem facilis quia ab obcaecati dolore praesentium ad, sunt ipsam veniam quaerat corrupti et dolorem dignissimos nesciunt quis maxime possimus, esse aliquam! Veritatis dolorem veniam praesentium voluptates recusandae, voluptatum consequuntur nisi in animi repellat vel assumenda dolores deserunt ad?
+    </p>
+</body>
+</html>

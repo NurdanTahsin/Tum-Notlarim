@@ -1,0 +1,16 @@
+{
+  "name": "typescript-notlari",
+  "version": "1.0.0",
+  "description": "TypeScript öğrenme notları ve örnekleri",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": ["typescript", "learning", "examples"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.0"
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth-Child Selector</title>
+
+    <style>
+        p {
+            font-size: 1.5em;
+        }
+
+        p:last-of-type { /* last-child çalışmadı, bu şekilde en sonki p çocuğu seçiyorum daha garanti */
+            background: yellow;
+        }
+
+        p:first-child {
+            background: green;
+        }
+
+        p:nth-child(1) {
+            color: red;
+        }
+
+        p:nth-child(3) {
+            color: blue;
+        }
+
+        p:nth-child(even) {
+            background: lightgray;
+        }
+
+        ul {
+            font-size: 1.5em;
+            list-style-type: none;
+        }
+
+        ul li:nth-child(2n) { /* n= 0 ile başlar */
+            color: orange;
+        }
+
+        /* odd ve even daha iyi, bunu aşağıdaki gibi seçeneklerde kullan */
+
+        /* Her 3 elementin birini seç (3, 6, 9, 12...)
+           p:nth-child(3n) { }
+
+           2'den başlayıp her 3'te bir (2, 5, 8, 11...)
+           p:nth-child(3n+2) { }
+
+           İlk 4 elementi seç
+           p:nth-child(-n+4) { } */
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, expedita!
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, expedita!
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, expedita!
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, expedita!
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, expedita!
+    </p>
+
+    <ul>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+    </ul>
+</body>
+</html>

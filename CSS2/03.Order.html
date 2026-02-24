@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style1.css">
+
+    <style>
+        /* h1 sonra gelmsine rağmen yazı kırmızı oldu çünkü #logo daha spesifik
+           Fakat kod okunabilirliği için genelden özele gidilmeli. Daha fazla ayrıntı için -> css-notlar
+
+        #logo {
+            color: red;
+        }
+
+        h1 {
+            color: blue;
+        } */
+
+        #logo {
+            color: green !important;
+            /* inline style tarafından ezilmişti ama important bunu engelledi */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header 1</h1>
+        <h1 style="color: blue" id="logo">Logo</h1>
+        <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <h1>Header 2</h1>
+
+    <p id="para1" class="lead info">
+        Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Dolore, tenetur!
+    </p>
+    <p class="info">
+        Lorem ipsum <span class="primary">dolor</span> sit amet consectetur
+        adipisicing elit. Magnam, nobis!
+    </p>
+    <p class="info">
+        Lorem ipsum <span>dolor</span> sit amet consectetur,
+        adipisicing elit. Quibusdam, nobis.
+    </p>
+    <p>Test Paragraph</p>
+
+    <a href="#">Home</a>
+</body>
+</html>

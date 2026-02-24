@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action = "process.php">
+            <!--HTML5 Input-->
+            <label for="name">Name</label> <br/>
+            <input type="text" placeholder="Your Name" id = "name" name = "name"/> <br/><br/>
+
+            <label for="email">Email</label> <br/>
+            <input type="email" id = "email" name = "email"/> <br/><br/>
+
+            <label for="password">Password</label> <br/>
+            <input type="password" id = "password" name = "password"/> <br/><br/>
+
+            <label for="date">Age</label> <br/>
+            <input type="date" id="date" name="date"/> <br/><br/>
+
+            <label>Gender</label> <br/>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="male" id="male"/>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="female" id="female" checked/> <br/><br/>
+            <!--Bir tanesinin seçilmesi için name attribute ları aynı olmalı-->
+
+            <label>Hobbies</label> <br/>
+            <label for="tech">Technology</label>
+            <input type="checkbox" name="tech" id="tech" checked/>
+            <label for="music">Music</label>
+            <input type="checkbox" name="music" id="music"/>
+            <label for="art">Art</label>
+            <input type="checkbox" name="art" id="art"/> <br/><br/>
+
+            <label for="degree">Degree</label> <br/>
+            <select name="degree" id="degree">
+                <option value="highschool">High School</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">PhD</option>
+            </select> <br/><br/>
+
+            <label for="about">About You</label> <br/>
+            <textarea name="about" id="about" cols="30" rows="10" placeholder="About You"></textarea> <br/><br/>
+
+            <input type="reset" value="Reset"/>
+            <input type="submit" value="Submit"/>
+            <!-- <button type="submit">Gönder</button> -->
+            <!-- bu da bir yol -->
+    </form>
+</body>
+</html>

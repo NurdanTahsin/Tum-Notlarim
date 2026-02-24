@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Event Örnekleri</title>
+    <style>
+        .box { 
+            width: 200px; height: 200px; 
+            background: lightblue; 
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .active { background: lightcoral; }
+    </style>
+</head>
+<body>
+    <h1>Event Örnekleri</h1>
+
+    <div class="box" id="box">Mouse ile oyna</div>
+    
+    <form id="form">
+        <input type="text" id="input" placeholder="Bir şey yaz...">
+        <button type="submit">Gönder</button>
+    </form>
+
+    <div id="output"></div>
+
+    <div id="container">
+        <button class="btn" data-id="1">Buton 1</button>
+        <button class="btn" data-id="2">Buton 2</button>
+        <button class="btn" data-id="3">Buton 3</button>
+    </div>
+
+    <script>
+        // 1. Mouse events
+        const box = document.getElementById('box');
+        
+        box.addEventListener('click', () => {
+            box.classList.toggle('active');
+        });
+
+        box.addEventListener('mouseenter', () => {
+            box.textContent = 'Mouse üzerimde!';
+        });
+
+        box.addEventListener('mouseleave', () => {
+            box.textContent = 'Mouse ile oyna';
+        });
+
+        // 2. Keyboard events
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+
+        input.addEventListener('input', (e) => {
+            output.textContent = `Yazdığın: ${e.target.value}`;
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                console.log('Enter tuşuna basıldı');
+            }
+        });
+
+        // 3. Form submit
+        const form = document.getElementById('form');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Sayfanın yenilenmesini engelle
+            const value = input.value;
+            alert(`Form gönderildi: ${value}`);
+            input.value = ''; // Input'u temizle
+        });
+
+        // 4. Event delegation
+        const container = document.getElementById('container');
+        
+        container.addEventListener('click', (e) => {
+            if (e.target.classList.contains('btn')) {
+                const id = e.target.getAttribute('data-id');
+                console.log(`Buton ${id} tıklandı`);
+            }
+        });
+
+        // 5. Multiple events
+        const events = ['click', 'dblclick'];
+        events.forEach(event => {
+            box.addEventListener(event, (e) => {
+                console.log(`${e.type} olayı gerçekleşti`);
+            });
+        });
+    </script>
+</body>
+</html>

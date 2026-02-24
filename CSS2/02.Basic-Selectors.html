@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Selectors</title>
+
+    <style>
+        /* h1 {
+            color: darkslateblue;
+            background: powderblue;
+        }
+        p {
+            color: rgb(6, 60, 7);
+            background: lightgrey
+        } */
+
+        /* h1, p {
+            color: rgb(6, 60, 7);
+            background: lightgrey
+        } */
+
+        /* #logo {
+            color: darkslateblue;
+            background: powderblue;
+        } */
+
+        /* .info {
+            color: rgb(6, 60, 7);
+            background: lightgrey
+        } */
+
+        /* #logo, .lead {
+            color: rgb(6, 60, 7);
+            background: lightgrey
+        } */
+
+        /* #para1.lead {
+            color: rgb(6, 60, 7);
+            background: lightgrey
+        } */
+
+        /* a {
+            color: powderblue;
+            background: darkslateblue;
+            text-decoration: none;
+        } */
+
+        /* ul li a {
+            color: powderblue;
+            background: darkslateblue;
+            text-decoration: none;
+        } */
+
+        /* .info span {
+            color: red;
+        }
+
+        .info .primary {
+            color: blue;
+        } */
+
+        * {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header 1</h1>
+        <h1 id="logo">Logo</h1>
+        <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <h1>Header 2</h1>
+
+    <p id="para1" class="lead info">
+        Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Dolore, tenetur!
+    </p>
+    <p class="info">
+        Lorem ipsum <span class="primary">dolor</span> sit amet consectetur
+        adipisicing elit. Magnam, nobis!
+    </p>
+    <p class="info">
+        Lorem ipsum <span>dolor</span> sit amet consectetur,
+        adipisicing elit. Quibusdam, nobis.
+    </p>
+    <p>Test Paragraph</p>
+
+    <a href="#">Home</a>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Örnekleri</title>
+    <style>
+        .active { color: green; font-weight: bold; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1 id="baslik">DOM Manipülasyonu</h1>
+    <p class="metin">İlk paragraf</p>
+    <p class="metin">İkinci paragraf</p>
+    
+    <button id="degistirBtn">Başlığı Değiştir</button>
+    <button id="ekleBtn">Paragraf Ekle</button>
+    <button id="toggleBtn">Gizle/Göster</button>
+
+    <div id="container"></div>
+
+    <script>
+        // Element seçme
+        const baslik = document.getElementById('baslik');
+        const metinler = document.querySelectorAll('.metin');
+        const container = document.querySelector('#container');
+
+        // Başlık değiştirme
+        document.getElementById('degistirBtn').addEventListener('click', () => {
+            baslik.textContent = "Başlık Değişti!";
+            baslik.classList.toggle('active');
+        });
+
+        // Yeni element ekleme
+        document.getElementById('ekleBtn').addEventListener('click', () => {
+            const yeniP = document.createElement('p');
+            yeniP.textContent = `Yeni paragraf - ${Date.now()}`;
+            yeniP.className = 'metin';
+            container.appendChild(yeniP);
+        });
+
+        // Toggle
+        let gizli = false;
+        document.getElementById('toggleBtn').addEventListener('click', () => {
+            metinler.forEach(p => p.classList.toggle('hidden'));
+            gizli = !gizli;
+        });
+
+        // Query selector kullanımı
+        const ilkMetin = document.querySelector('.metin');
+        ilkMetin.style.backgroundColor = '#f0f0f0';
+    </script>
+</body>
+</html>
