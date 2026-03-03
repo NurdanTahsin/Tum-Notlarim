@@ -5,8 +5,8 @@ import './App.css'
 import JsxBasics from './01-jsx-basics/index'
 import Components from './02-components/index'
 import Props from './03-props/index'
-// import State from './04-state/index'
-// import Events from './05-events/index'
+import State from './04-state/index'
+import UseEffect from './05-events/index'
 // import ConditionalRendering from './06-conditional-rendering/index'
 // import ListsKeys from './07-lists-keys/index'
 // import Forms from './08-forms/index'
@@ -21,8 +21,8 @@ function App() {
     'jsx-basics': <JsxBasics />,
     'components': <Components />,
     'props': <Props />,
-    // 'state': <State />,
-    // 'events': <Events />,
+    'state': <State />,
+    'useeffect': <UseEffect />,
     // 'conditional-rendering': <ConditionalRendering />,
     // 'lists-keys': <ListsKeys />,
     // 'forms': <Forms />,
@@ -35,7 +35,7 @@ function App() {
     { id: 'components', title: '02 - Components', emoji: '🧩' },
     { id: 'props', title: '03 - Props', emoji: '📦' },
     { id: 'state', title: '04 - State', emoji: '🔄' },
-    { id: 'events', title: '05 - Events', emoji: '🖱️' },
+    { id: 'useeffect', title: '05 - useEffect', emoji: '⚡' },
     { id: 'conditional-rendering', title: '06 - Conditional Rendering', emoji: '❓' },
     { id: 'lists-keys', title: '07 - Lists & Keys', emoji: '📋' },
     { id: 'forms', title: '08 - Forms', emoji: '📝' },

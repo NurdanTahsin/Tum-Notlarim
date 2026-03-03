@@ -1,0 +1,486 @@
+.state-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+    border-radius: 12px;
+    color: white;
+}
+
+.header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.example-box {
+    background: #242424;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #333;
+    transition: all 0.3s;
+}
+
+.example-box:hover {
+    border-color: #30cfd0;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(48, 207, 208, 0.2);
+}
+
+.example-box h3 {
+    color: #30cfd0;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.example-box p {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+.note {
+    background: #1a1a1a;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border-left: 3px solid #30cfd0;
+    margin-top: 1rem !important;
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-add,
+.btn-small {
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.btn-add {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    padding: 0.8rem 1.2rem;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-success:hover,
+.btn-danger:hover,
+.btn-add:hover,
+.btn-small:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Örnek 1 - Count Display */
+.count-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #30cfd0;
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+/* Örnek 2 - Counter Display */
+.counter-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.btn-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #30cfd0;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Örnek 3 - Input Field */
+.input-field {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #30cfd0;
+    box-shadow: 0 0 0 3px rgba(48, 207, 208, 0.1);
+}
+
+.greeting-text {
+    font-size: 1.5rem;
+    color: #30cfd0;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+/* Örnek 4 - Message Box */
+.message-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.message-box p {
+    margin: 0.5rem 0;
+    color: white;
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Örnek 5 - User Info */
+.user-info {
+    background: #1a1a1a;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 2px solid #333;
+}
+
+.user-info p {
+    margin: 0.5rem 0;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.user-info strong {
+    color: #30cfd0;
+    margin-right: 0.5rem;
+}
+
+/* Örnek 6 - Items List */
+.add-item-section {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.add-item-section .input-field {
+    flex: 1;
+    margin: 0;
+}
+
+.items-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.items-list li {
+    background: #1a1a1a;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    border-left: 3px solid #30cfd0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ccc;
+    transition: all 0.2s;
+}
+
+.items-list li:hover {
+    background: #2a2a2a;
+    transform: translateX(5px);
+}
+
+.btn-remove {
+    background: #ef4444;
+    border: none;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-remove:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+
+/* Örnek 7 - Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.result-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.result-box p {
+    margin: 0.5rem 0;
+    color: white;
+    font-size: 1rem;
+}
+
+.result-box strong {
+    color: #e0e7ff;
+}
+
+/* Örnek 8 - Status Box */
+.status-box {
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transition: all 0.3s;
+}
+
+.status-emoji {
+    font-size: 2rem;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    margin: 1rem 0;
+}
+
+/* Örnek 10 - Summary */
+.summary {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-color: #3b82f6;
+}
+
+.summary h3 {
+    color: #93c5fd;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.rule-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.2rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.rule-card h4 {
+    margin: 0 0 0.5rem 0;
+    color: #93c5fd;
+    font-size: 1rem;
+}
+
+.rule-card p {
+    margin: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.rule-card code {
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: #fde047;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    word-wrap: break-word;
+}
+
+.tip-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.tip-box h4 {
+    margin: 0 0 1rem 0;
+    color: #fde047;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.comparison-col {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.comparison-col h5 {
+    margin: 0 0 0.8rem 0;
+    color: #93c5fd;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.comparison-col ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.comparison-col li {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.footer-note {
+    background: #2d3748;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #30cfd0;
+}
+
+.footer-note p {
+    margin: 0;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+.footer-note strong {
+    color: #30cfd0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .add-item-section {
+        flex-direction: column;
+    }
+
+    .counter-display {
+        gap: 0.5rem;
+    }
+
+    .number {
+        font-size: 2rem;
+        min-width: 60px;
+    }
+}
