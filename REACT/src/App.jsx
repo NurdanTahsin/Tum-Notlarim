@@ -4,7 +4,7 @@ import './App.css'
 // Örnekleri hazır olduğunda import et:
 import JsxBasics from './01-jsx-basics/index'
 import Components from './02-components/index'
-// import Props from './03-props/index'
+import Props from './03-props/index'
 // import State from './04-state/index'
 // import Events from './05-events/index'
 // import ConditionalRendering from './06-conditional-rendering/index'
@@ -20,7 +20,7 @@ function App() {
   const lessons = {
     'jsx-basics': <JsxBasics />,
     'components': <Components />,
-    // 'props': <Props />,
+    'props': <Props />,
     // 'state': <State />,
     // 'events': <Events />,
     // 'conditional-rendering': <ConditionalRendering />,
