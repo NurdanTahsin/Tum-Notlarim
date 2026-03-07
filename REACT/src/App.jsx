@@ -6,8 +6,8 @@ import JsxBasics from './01-jsx-basics/index'
 import Components from './02-components/index'
 import Props from './03-props/index'
 import State from './04-state/index'
-import UseEffect from './05-events/index'
-// import ConditionalRendering from './06-conditional-rendering/index'
+import UseEffect from './05-useeffect/index'
+import Urunlerim from './Mini Proje/Urunlerim'
 // import ListsKeys from './07-lists-keys/index'
 // import Forms from './08-forms/index'
 // import Hooks from './09-hooks/index'
@@ -23,7 +23,7 @@ function App() {
     'props': <Props />,
     'state': <State />,
     'useeffect': <UseEffect />,
-    // 'conditional-rendering': <ConditionalRendering />,
+    'mini-proje': <Urunlerim />,
     // 'lists-keys': <ListsKeys />,
     // 'forms': <Forms />,
     // 'hooks': <Hooks />,
@@ -31,16 +31,16 @@ function App() {
   }
 
   const menuItems = [
-    { id: 'jsx-basics', title: '01 - JSX Basics', emoji: '📝' },
-    { id: 'components', title: '02 - Components', emoji: '🧩' },
-    { id: 'props', title: '03 - Props', emoji: '📦' },
-    { id: 'state', title: '04 - State', emoji: '🔄' },
-    { id: 'useeffect', title: '05 - useEffect', emoji: '⚡' },
-    { id: 'conditional-rendering', title: '06 - Conditional Rendering', emoji: '❓' },
-    { id: 'lists-keys', title: '07 - Lists & Keys', emoji: '📋' },
-    { id: 'forms', title: '08 - Forms', emoji: '📝' },
-    { id: 'hooks', title: '09 - Hooks', emoji: '🪝' },
-    { id: 'lifecycle', title: '10 - Lifecycle', emoji: '♻️' },
+    { id: 'jsx-basics', title: '01 - JSX Basics' },
+    { id: 'components', title: '02 - Components' },
+    { id: 'props', title: '03 - Props' },
+    { id: 'state', title: '04 - State' },
+    { id: 'useeffect', title: '05 - useEffect' },
+    { id: 'lists-keys', title: '07 - Lists & Keys' },
+    { id: 'forms', title: '08 - Forms' },
+    { id: 'hooks', title: '09 - Hooks' },
+    { id: 'lifecycle', title: '10 - Lifecycle' },
+    { id: 'mini-proje', title: 'Mini Proje' },
   ]
 
   return (
