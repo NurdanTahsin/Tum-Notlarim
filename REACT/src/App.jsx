@@ -8,7 +8,7 @@ import Props from './03-props/index'
 import State from './04-state/index'
 import UseEffect from './05-useeffect/index'
 import Urunlerim from './Mini Proje/Urunlerim'
-// import ListsKeys from './07-lists-keys/index'
+import Index from './06-axios/index'
 // import Forms from './08-forms/index'
 // import Hooks from './09-hooks/index'
 // import Lifecycle from './10-lifecycle/index'
@@ -24,7 +24,7 @@ function App() {
     'state': <State />,
     'useeffect': <UseEffect />,
     'mini-proje': <Urunlerim />,
-    // 'lists-keys': <ListsKeys />,
+    'axios': <Index />,
     // 'forms': <Forms />,
     // 'hooks': <Hooks />,
     // 'lifecycle': <Lifecycle />,
@@ -36,6 +36,7 @@ function App() {
     { id: 'props', title: '03 - Props' },
     { id: 'state', title: '04 - State' },
     { id: 'useeffect', title: '05 - useEffect' },
+    { id: 'axios', title: '06 - Axios' },
     { id: 'lists-keys', title: '07 - Lists & Keys' },
     { id: 'forms', title: '08 - Forms' },
     { id: 'hooks', title: '09 - Hooks' },
